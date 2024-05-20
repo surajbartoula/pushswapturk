@@ -6,7 +6,7 @@
 #    By: sbartoul <sbartoul@student.42abudhabi.ae>  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/25 06:35:38 by sbartoul          #+#    #+#              #
-#    Updated: 2024/05/19 12:19:02 by sbartoul         ###   ########.fr        #
+#    Updated: 2024/05/20 06:21:41 by sbartoul         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -27,7 +27,6 @@ CUT = "\033[K"
 
 CFILES = 	push_swap.c     	\
 			argumentstolst.c	\
-			bigsort.c			\
 			errors.c			\
 			indexsorting.c		\
 			libft.c				\
@@ -38,9 +37,7 @@ CFILES = 	push_swap.c     	\
 			sort.c				\
 			stacksortcheck.c	\
 			split.c				\
-			divideconquer.c		\
 			sortfour.c			\
-			rotate_sort.c		\
 			find_index.c		\
 			apply.c				\
 			rot_amount.c		\
