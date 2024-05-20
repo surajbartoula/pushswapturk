@@ -6,7 +6,7 @@
 /*   By: sbartoul <sbartoul@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/18 11:10:08 by sbartoul          #+#    #+#             */
-/*   Updated: 2024/05/20 04:42:05 by sbartoul         ###   ########.fr       */
+/*   Updated: 2024/05/20 05:33:22 by sbartoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ int	do_rrarrb(t_stack **a, t_stack **b, int num, char c)
 {
 	if (c == 'a')
 	{
-		while ((*a)->num != num && ft_find_place_b(*b, c) > 0)
+		while ((*a)->num != num && ft_find_place_b(*b, num) > 0)
 			ft_rrr(a, b, 1);
 		while ((*a)->num != num)
 			ft_rra(a, 1);

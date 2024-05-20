@@ -6,11 +6,26 @@
 /*   By: sbartoul <sbartoul@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/13 15:11:44 by sbartoul          #+#    #+#             */
-/*   Updated: 2024/05/20 04:51:18 by sbartoul         ###   ########.fr       */
+/*   Updated: 2024/05/20 05:32:55 by sbartoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
+#include <stdio.h>
+
+void print_stack(t_stack *stack, const char *name) {
+    if (stack == NULL) {
+        printf("%s is empty\n", name);
+        return;
+    }
+
+    printf("Contents of stack %s:\n", name);
+    while (stack != NULL) {
+        printf("%d -> ", stack->num);
+        stack = stack->next;
+    }
+    printf("NULL\n");
+}
 
 void	filter_sort(t_stack **a, t_stack **b, int size)
 {
