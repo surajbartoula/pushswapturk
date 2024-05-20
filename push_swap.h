@@ -6,7 +6,7 @@
 /*   By: sbartoul <sbartoul@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/13 17:09:41 by sbartoul          #+#    #+#             */
-/*   Updated: 2024/05/20 06:16:41 by sbartoul         ###   ########.fr       */
+/*   Updated: 2024/05/20 07:13:14 by sbartoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,6 @@
 typedef struct push_swap
 {
 	struct push_swap	*next;
-	struct push_swap	*prev;
 	int					num;
 	int					p_index;
 }				t_stack;
