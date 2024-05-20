@@ -6,33 +6,18 @@
 /*   By: sbartoul <sbartoul@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/18 23:40:40 by sbartoul          #+#    #+#             */
-/*   Updated: 2024/05/19 16:41:15 by sbartoul         ###   ########.fr       */
+/*   Updated: 2024/05/20 04:45:57 by sbartoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-#include <stdio.h>
-
-void print_stack(t_stack *stack, const char *name) {
-    if (stack == NULL) {
-        printf("%s is empty\n", name);
-        return;
-    }
-
-    printf("Contents of stack %s:\n", name);
-    while (stack != NULL) {
-        printf("%d -> ", stack->num);
-        stack = stack->next;
-    }
-    printf("NULL\n");
-}
 
 void	b_till_3(t_stack **a, t_stack **b)
 {
 	t_stack	*stacka;
 	int		i;
 
-	while (!stack_sorted(*a) && ft_lstsize(*a) > 3)
+	while (ft_lstsize(*a) > 3 && !stack_sorted(*a))
 	{
 		stacka = *a;
 		i = rotate_type_ab(*a, *b);
@@ -94,9 +79,7 @@ void	sort_after_four(t_stack **a, t_stack **b)
 	int	i;
 
 	b = ft_sort_b(a, b);
-	print_stack(*b, "b");
 	a = ft_sort_a(a, b);
-	print_stack(*a, "a");
 	i = ft_find_index(*a, ft_min(*a));
 	if (i < ft_lstsize(*a) - i)
 	{

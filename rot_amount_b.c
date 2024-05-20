@@ -6,7 +6,7 @@
 /*   By: sbartoul <sbartoul@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/18 18:00:27 by sbartoul          #+#    #+#             */
-/*   Updated: 2024/05/19 11:15:37 by sbartoul         ###   ########.fr       */
+/*   Updated: 2024/05/20 04:51:20 by sbartoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ int	rrarrb_b(t_stack *a, t_stack *b, int num)
 	i = 0;
 	if (ft_find_place_b(b, num))
 		i = ft_lstsize(b) - ft_find_place_b(b, num);
-	if (ft_find_index(a, num) && (i < (ft_lstsize(a) - ft_find_index(a, num))))
+	if ((i < (ft_lstsize(a) - ft_find_index(a, num))) && ft_find_index(a, num))
 		i = ft_lstsize(a) - ft_find_index(a, num);
 	return (i);
 }

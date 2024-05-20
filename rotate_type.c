@@ -6,7 +6,7 @@
 /*   By: sbartoul <sbartoul@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/18 13:52:20 by sbartoul          #+#    #+#             */
-/*   Updated: 2024/05/20 07:25:55 by sbartoul         ###   ########.fr       */
+/*   Updated: 2024/05/20 03:53:00 by sbartoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ int	rotate_type_ab(t_stack *a, t_stack *b)
 		if (i > rarb_b(a, b, astack->num))
 			i = rarb_b(a, b, astack->num);
 		if (i > rrarrb_b(a, b, astack->num))
-			i = rrarb_b(a, b, astack->num);
+			i = rrarrb_b(a, b, astack->num);
 		if (i > rarrb_b(a, b, astack->num))
 			i = rarrb_b(a, b, astack->num);
 		if (i > rrarb_b(a, b, astack->num))
