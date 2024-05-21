@@ -6,7 +6,7 @@
 /*   By: sbartoul <sbartoul@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/18 23:40:40 by sbartoul          #+#    #+#             */
-/*   Updated: 2024/05/21 05:55:10 by sbartoul         ###   ########.fr       */
+/*   Updated: 2024/05/21 06:50:19 by sbartoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	b_till_3(t_stack **a, t_stack **b)
 	int		i;
 	t_stack	*stacka;
 
-	while (ft_lstsize(*a) > 3 && !stack_sorted(*a))
+	while (!stack_sorted(*a) && ft_lstsize(*a) > 3)
 	{
 		stacka = *a;
 		i = rotate_type_ab(*a, *b);
