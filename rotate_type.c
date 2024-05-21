@@ -6,51 +6,67 @@
 /*   By: sbartoul <sbartoul@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/18 13:52:20 by sbartoul          #+#    #+#             */
-/*   Updated: 2024/05/20 03:53:00 by sbartoul         ###   ########.fr       */
+/*   Updated: 2024/05/21 14:29:40 by sbartoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
+int	cheapest_cost_ba(t_stack **a, t_stack **b, int num)
+{
+	int	arr[5];
+
+	arr[0] = rrarrb_a(*a, *b, num);
+	arr[1] = rarb_a(*a, *b, num);
+	arr[2] = rrarrb_a(*a, *b, num);
+	arr[3] = rarrb_a(*a, *b, num);
+	arr[4] = rrarb_a(*a, *b, num);
+	return (ft_min_arr(arr, 5));
+}
+
 int	rotate_type_ba(t_stack *a, t_stack *b)
 {
 	int		i;
+	int		current_cost;
 	t_stack	*bstack;
 
 	bstack = b;
-	i = rrarrb_a(a, b, b->num);
+	i = cheapest_cost_ba(&a, &b, bstack->num);
 	while (bstack)
 	{
-		if (i > rarb_a(a, b, bstack->num))
-			i = rarb_a(a, b, bstack->num);
-		if (i > rrarrb_a(a, b, bstack->num))
-			i = rrarrb_a(a, b, bstack->num);
-		if (i > rarrb_a(a, b, bstack->num))
-			i = rarrb_a(a, b, bstack->num);
-		if (i > rrarb_a(a, b, bstack->num))
-			i = rrarb_a(a, b, bstack->num);
+		current_cost = cheapest_cost_ba(&a, &b, bstack->num);
+		if (i > current_cost)
+			i = current_cost;
 		bstack = bstack->next;
 	}
 	return (i);
 }
 
+int	cheapest_cost(t_stack **a, t_stack **b, int num)
+{
+	int	arr[5];
+
+	arr[0] = rrarrb_b(*a, *b, num);
+	arr[1] = rarb_b(*a, *b, num);
+	arr[2] = rrarrb_b(*a, *b, num);
+	arr[3] = rarrb_b(*a, *b, num);
+	arr[4] = rrarb_b(*a, *b, num);
+	return (ft_min_arr(arr, 5));
+}
+
 int	rotate_type_ab(t_stack *a, t_stack *b)
 {
 	int		i;
+	int		current_cost;
 	t_stack	*astack;
 
 	astack = a;
-	i = rrarrb_b(a, b, a->num);
+	i = cheapest_cost(&a, &b, astack->num);
 	while (astack)
 	{
-		if (i > rarb_b(a, b, astack->num))
-			i = rarb_b(a, b, astack->num);
-		if (i > rrarrb_b(a, b, astack->num))
-			i = rrarrb_b(a, b, astack->num);
-		if (i > rarrb_b(a, b, astack->num))
-			i = rarrb_b(a, b, astack->num);
-		if (i > rrarb_b(a, b, astack->num))
-			i = rrarb_b(a, b, astack->num);
+		current_cost = cheapest_cost(&a, &b, astack->num);
+		if (i > current_cost)
+			i = current_cost;
 		astack = astack->next;
 	}
 	return (i);
