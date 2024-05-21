@@ -6,7 +6,7 @@
 /*   By: sbartoul <sbartoul@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/18 23:40:40 by sbartoul          #+#    #+#             */
-/*   Updated: 2024/05/20 04:45:57 by sbartoul         ###   ########.fr       */
+/*   Updated: 2024/05/21 05:55:10 by sbartoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,26 +14,14 @@
 
 void	b_till_3(t_stack **a, t_stack **b)
 {
-	t_stack	*stacka;
 	int		i;
+	t_stack	*stacka;
 
 	while (ft_lstsize(*a) > 3 && !stack_sorted(*a))
 	{
 		stacka = *a;
 		i = rotate_type_ab(*a, *b);
-		while (i >= 0)
-		{
-			if (i == rarb_b(*a, *b, stacka->num))
-				i = do_rarb(a, b, stacka->num, 'a');
-			else if (i == rrarrb_b(*a, *b, stacka->num))
-				i = do_rrarrb(a, b, stacka->num, 'a');
-			else if (i == rarrb_b(*a, *b, stacka->num))
-				i = do_rarrb(a, b, stacka->num, 'a');
-			else if (i == rrarb_b(*a, *b, stacka->num))
-				i = do_rrarb(a, b, stacka->num, 'a');
-			else
-				stacka = stacka->next;
-		}
+		ft_loop_a(i, a, b, stacka);
 	}
 }
 
@@ -57,19 +45,7 @@ t_stack	**ft_sort_a(t_stack **a, t_stack **b)
 	{
 		stackb = *b;
 		i = rotate_type_ba(*a, *b);
-		while (i >= 0)
-		{
-			if (i == rarb_a(*a, *b, stackb->num))
-				i = do_rarb(a, b, stackb->num, 'b');
-			else if (i == rarrb_a(*a, *b, stackb->num))
-				i = do_rarrb(a, b, stackb->num, 'b');
-			else if (i == rrarrb_a(*a, *b, stackb->num))
-				i = do_rrarrb(a, b, stackb->num, 'b');
-			else if (i == rrarb_a(*a, *b, stackb->num))
-				i = do_rrarb(a, b, stackb->num, 'b');
-			else
-				stackb = stackb->next;
-		}
+		ft_loop_b(i, a, b, stackb);
 	}
 	return (a);
 }

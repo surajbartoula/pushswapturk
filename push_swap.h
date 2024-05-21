@@ -6,7 +6,7 @@
 /*   By: sbartoul <sbartoul@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/13 17:09:41 by sbartoul          #+#    #+#             */
-/*   Updated: 2024/05/20 07:13:14 by sbartoul         ###   ########.fr       */
+/*   Updated: 2024/05/21 05:53:32 by sbartoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,10 +61,10 @@ void	ft_sortfour(t_stack **a, t_stack **b);
 int		ft_find_index(t_stack *a, int num);
 int		ft_find_place_b(t_stack *b, int nbr_push);
 int		ft_find_place_a(t_stack *a, int nbr_push);
-int		do_rarb(t_stack **a, t_stack **b, int num, char c);
-int		do_rrarrb(t_stack **a, t_stack **b, int num, char c);
-int		do_rrarb(t_stack **a, t_stack **b, int num, char c);
-int		do_rarrb(t_stack **a, t_stack **b, int num, char c);
+void	do_rarb(t_stack **a, t_stack **b, int num, char c);
+void	do_rrarrb(t_stack **a, t_stack **b, int num, char c);
+void	do_rrarb(t_stack **a, t_stack **b, int num, char c);
+void	do_rarrb(t_stack **a, t_stack **b, int num, char c);
 int		rarb_a(t_stack *a, t_stack *b, int num);
 int		rrarrb_a(t_stack *a, t_stack *b, int num);
 int		rarrb_a(t_stack *a, t_stack *b, int num);
@@ -79,5 +79,7 @@ int		ft_max(t_stack *lst);
 int		rotate_type_ba(t_stack *a, t_stack *b);
 int		rotate_type_ab(t_stack *a, t_stack *b);
 void	sort_after_four(t_stack **a, t_stack **b);
+void	ft_loop_a(int i, t_stack **a, t_stack **b, t_stack *stacka);
+void	ft_loop_b(int i, t_stack **a, t_stack **b, t_stack *stackb);
 
 #endif

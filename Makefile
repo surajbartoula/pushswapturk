@@ -6,7 +6,7 @@
 #    By: sbartoul <sbartoul@student.42abudhabi.ae>  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/25 06:35:38 by sbartoul          #+#    #+#              #
-#    Updated: 2024/05/20 06:21:41 by sbartoul         ###   ########.fr        #
+#    Updated: 2024/05/21 05:38:11 by sbartoul         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -45,6 +45,7 @@ CFILES = 	push_swap.c     	\
 			sortafterfour.c		\
 			min_max.c			\
 			rotate_type.c		\
+			loop.c				\
 
 OBJECTS = ${CFILES:.c=.o}
 
