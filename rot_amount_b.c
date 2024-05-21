@@ -6,7 +6,7 @@
 /*   By: sbartoul <sbartoul@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/18 18:00:27 by sbartoul          #+#    #+#             */
-/*   Updated: 2024/05/20 04:51:20 by sbartoul         ###   ########.fr       */
+/*   Updated: 2024/05/21 04:54:31 by sbartoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,44 +14,44 @@
 
 int	rarb_b(t_stack *a, t_stack *b, int num)
 {
-	int	i;
-
-	i = ft_find_place_b(b, num);
-	if (i < ft_find_index(a, num))
-		i = ft_find_index(a, num);
-	return (i);
+	if (ft_find_place_b(b, num) < ft_find_index(a, num))
+		return (ft_find_index(a, num));
+	else
+		return (ft_find_place_b(b, num));
 }
 
 int	rrarrb_b(t_stack *a, t_stack *b, int num)
 {
 	int	i;
 
-	i = 0;
-	if (ft_find_place_b(b, num))
+	if (ft_find_place_b(b, num) > 0)
 		i = ft_lstsize(b) - ft_find_place_b(b, num);
+	else
+		i = 0;
 	if ((i < (ft_lstsize(a) - ft_find_index(a, num))) && ft_find_index(a, num))
-		i = ft_lstsize(a) - ft_find_index(a, num);
-	return (i);
+		return (ft_lstsize(a) - ft_find_index(a, num));
+	else
+		return (i);
 }
 
 int	rarrb_b(t_stack *a, t_stack *b, int num)
 {
 	int	i;
 
-	i = 0;
-	if (ft_find_place_b(b, num))
+	if (ft_find_place_b(b, num) > 0)
 		i = ft_lstsize(b) - ft_find_place_b(b, num);
-	i = ft_find_index(a, num) + i;
-	return (i);
+	else
+		i = 0;
+	return (ft_find_index(a, num) + i);
 }
 
 int	rrarb_b(t_stack *a, t_stack *b, int num)
 {
 	int	i;
 
-	i = 0;
 	if (ft_find_index(a, num))
 		i = ft_lstsize(a) - ft_find_index(a, num);
-	i = ft_find_place_b(b, num) + i;
-	return (i);
+	else
+		i = 0;
+	return (ft_find_place_b(b, num) + i);
 }
