@@ -6,7 +6,7 @@
 #    By: sbartoul <sbartoul@student.42abudhabi.ae>  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/25 06:35:38 by sbartoul          #+#    #+#              #
-#    Updated: 2024/05/21 05:38:11 by sbartoul         ###   ########.fr        #
+#    Updated: 2024/05/22 05:52:02 by sbartoul         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -74,7 +74,7 @@ clean:
 	@echo $(R)Removed [$(OBJECTS)]$(X)
 
 fclean: clean
-	@make -C $(FT_PRINTF_PATH) clean
+	@make -C $(FT_PRINTF_PATH) fclean
 	@rm -f $(NAME)
 	@echo $(R)Removed [$(NAME)]$(X)
 
