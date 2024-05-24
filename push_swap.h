@@ -6,7 +6,7 @@
 /*   By: sbartoul <sbartoul@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/13 17:09:41 by sbartoul          #+#    #+#             */
-/*   Updated: 2024/05/21 11:01:48 by sbartoul         ###   ########.fr       */
+/*   Updated: 2024/05/24 04:43:25 by sbartoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,5 +82,6 @@ void	sort_after_four(t_stack **a, t_stack **b);
 void	ft_loop_a(int i, t_stack **a, t_stack **b, t_stack *stacka);
 void	ft_loop_b(int i, t_stack **a, t_stack **b, t_stack *stackb);
 int		ft_min_arr(int *arr, int len);
+int		ft_isdigit(int c);
 
 #endif
